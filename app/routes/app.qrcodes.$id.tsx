@@ -1,34 +1,34 @@
-import { useState } from "react";
 import { json, redirect } from "@remix-run/node";
 import {
   useActionData,
   useLoaderData,
+  useNavigate,
   useNavigation,
   useSubmit,
-  useNavigate,
 } from "@remix-run/react";
-import { authenticate } from "../shopify.server";
 import {
-  Card,
   Bleed,
+  BlockStack,
   Button,
+  Card,
   ChoiceList,
   Divider,
   EmptyState,
-  InlineStack,
   InlineError,
+  InlineStack,
   Layout,
   Page,
+  PageActions,
   Text,
   TextField,
   Thumbnail,
-  BlockStack,
-  PageActions,
 } from "@shopify/polaris";
 import { ImageIcon } from "@shopify/polaris-icons";
+import { useState } from "react";
+import { authenticate } from "../shopify.server";
 
-import db from "../db.server";
 import { getQRCode, validateQRCode } from "~/models/QRcode.server";
+import db from "../db.server";
 
 export async function loader({ request, params }) {
   const { admin } = await authenticate.admin(request);

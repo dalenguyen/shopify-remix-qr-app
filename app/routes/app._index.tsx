@@ -1,32 +1,20 @@
-import { useEffect } from "react";
 import type { ActionFunctionArgs, LoaderFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
+import { Link, useLoaderData, useNavigate } from "@remix-run/react";
 import {
-  useActionData,
-  useLoaderData,
-  useNavigate,
-  useNavigation,
-  useSubmit,
-} from "@remix-run/react";
-import {
-  Page,
-  Layout,
-  Text,
   Card,
-  Button,
-  BlockStack,
-  Box,
-  List,
-  Link,
-  InlineStack,
   EmptyState,
-  IndexTable,
-  Thumbnail,
   Icon,
+  IndexTable,
+  InlineStack,
+  Layout,
+  Page,
+  Text,
+  Thumbnail,
 } from "@shopify/polaris";
-import { authenticate } from "../shopify.server";
-import { getQRCodes } from "~/models/QRcode.server";
 import { AlertDiamondIcon, ImageIcon } from "@shopify/polaris-icons";
+import { getQRCodes } from "~/models/QRcode.server";
+import { authenticate } from "../shopify.server";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   const { admin, session } = await authenticate.admin(request);
