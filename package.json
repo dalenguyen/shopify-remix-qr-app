@@ -12,6 +12,7 @@
     "start": "remix-serve ./build/server/index.js",
     "docker-start": "npm run setup && npm run start",
     "setup": "prisma generate && prisma migrate deploy",
+    "setup-dev": "prisma migrate dev",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "shopify": "shopify",
     "prisma": "prisma",
@@ -20,6 +21,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@prisma/adapter-pg": "^5.10.2",
     "@prisma/client": "^5.8.0",
     "@remix-run/dev": "^2.7.1",
     "@remix-run/node": "^2.7.1",
@@ -33,6 +35,7 @@
     "@shopify/shopify-app-remix": "^2.5.0",
     "@shopify/shopify-app-session-storage-prisma": "^4.0.1",
     "isbot": "^5.1.0",
+    "pg": "^8.11.3",
     "prisma": "^5.8.0",
     "qrcode": "^1.5.3",
     "react": "^18.2.0",
