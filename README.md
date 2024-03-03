@@ -44,6 +44,12 @@ Using pnpm:
 pnpm run build
 ```
 
+### Debuging PosgresSQL database
+
+```
+gcloud sql connect amazing-app --user=postgres --quiet
+```
+
 ## Hosting
 
 When you're ready to set up your app in production, you can follow [our deployment documentation](https://shopify.dev/docs/apps/deployment/web) to host your app on a cloud provider like [Heroku](https://www.heroku.com/) or [Fly.io](https://fly.io/).
