@@ -2,7 +2,7 @@
 
 client_id = "ccdf9b5d9b79e0509729fdb949dc719c"
 name = "amazing-app"
-application_url = "https://bios-kruger-evaluating-austin.trycloudflare.com"
+application_url = "https://hamburg-commander-antique-porsche.trycloudflare.com"
 embedded = true
 
 [build]
@@ -16,9 +16,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://bios-kruger-evaluating-austin.trycloudflare.com/auth/callback",
-  "https://bios-kruger-evaluating-austin.trycloudflare.com/auth/shopify/callback",
-  "https://bios-kruger-evaluating-austin.trycloudflare.com/api/auth/callback"
+  "https://hamburg-commander-antique-porsche.trycloudflare.com/auth/callback",
+  "https://hamburg-commander-antique-porsche.trycloudflare.com/auth/shopify/callback",
+  "https://hamburg-commander-antique-porsche.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
